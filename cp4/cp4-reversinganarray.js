@@ -27,13 +27,11 @@ function reverseInPlace (arr) {
     for (let i = 0 ; i < Math.floor(arr.length / 2) ; i++) {
         holder = arr[i];
         arr[i] = arr[arr.length - 1 - i];
-        arr.pop(arr.length - 1 - i);
-        arr.push(holder);
-        holder = arr[i + 1];
+        arr[arr.length - 1 - i] = holder;
         console.log(arr);
     }
 
-    //console.log(...arr);
+    console.log(...arr);
 }
 
 reverseInPlace(arrayValue);
